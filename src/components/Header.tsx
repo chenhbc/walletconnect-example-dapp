@@ -86,6 +86,8 @@ interface IHeaderProps {
 const Header = ({ connected, address, chainId, killSession }: IHeaderProps) => {
   let activeChain = null;
 
+  console.log("chainId", chainId);
+
   try {
     activeChain = chainId ? getChainData(chainId).name : null;
   } catch (error) {
